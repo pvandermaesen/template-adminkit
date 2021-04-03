@@ -1,0 +1,133 @@
+body {
+    font-family: Roboto, Courier, monospace, serif, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.sidebar-bran {
+	padding: 0;
+}
+
+.alert {
+	padding: .5rem 1rem;
+}
+
+.navbar-brand {
+	text-align: center;
+	max-width: 100%;
+	img {
+		max-width: 75%;
+	}
+}
+
+.dropdown-menu {
+	min-width: 20rem;
+}
+
+.brand-image {
+	max-width: 100%;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+#menu {
+	ul {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	flex-grow: 1;
+	}
+
+	// Sidebar links
+	a {
+	display: block;
+	padding: $sidebar-link-padding;
+	font-weight: $sidebar-link-font-weight;
+	transition: background .1s ease-in-out;
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+	border-left-style: solid;
+	border-left-width: 3px;
+	color: $sidebar-link-color;
+	background: $sidebar-link-bg;
+	border-left-color: $sidebar-link-border-left-color;
+
+	i,
+	svg {
+		margin-right: .75rem;
+		color: $sidebar-link-icon-color;
+	}
+	}
+
+	a:focus {
+	outline: 0;
+	}
+
+	a:hover {
+	color: $sidebar-link-hover-color;
+	background: $sidebar-link-hover-bg;
+	border-left-color: $sidebar-link-hover-border-left-color;
+
+	i,
+	svg {
+		color: $sidebar-link-icon-hover-color;
+	}
+	}
+
+	li.active > a,
+	li.active a:hover {
+	color: $sidebar-link-active-color;
+	background: $sidebar-link-active-bg;
+	border-left-color: $sidebar-link-active-border-left-color;
+
+	i,
+	svg {
+		color: $sidebar-link-icon-active-color;
+	}
+	}
+
+	// Children
+	.sidebar-dropdown a {
+	padding: $sidebar-link-child-padding;
+	font-weight: $sidebar-link-child-font-weight;
+	font-size: $sidebar-link-child-font-size;
+	border-left: 0;
+	color: $sidebar-link-child-color;
+	background: $sidebar-link-child-bg;
+
+	&:before {
+		content: "→";
+		display: inline-block;
+		position: relative;
+		left: -14px;
+		transition: all .1s ease;
+		transform: translateX(0);
+	}
+	}
+
+	.sidebar-dropdown li a:hover {
+	font-weight: $sidebar-link-hover-font-weight;
+	border-left: 0;
+	color: $sidebar-link-child-hover-color;
+	background: $sidebar-link-child-hover-bg;
+
+	&:hover {
+		&:before {
+		transform: translateX(4px);
+		}
+	}
+	}
+
+	.sidebar-dropdown li.active a {
+	font-weight: $sidebar-link-active-font-weight;
+	border-left: 0;
+
+	color: $sidebar-link-child-active-color;
+	background: $sidebar-link-child-active-bg;
+	}
+}
